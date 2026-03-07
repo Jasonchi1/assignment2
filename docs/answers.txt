@@ -1,2 +1,86 @@
 Name: Yiheng Chi
 FSUID: yc21i
+
+Date Git tutorials completed: March 7, 2026
+Date GitHub account created: Around 2024
+
+--------------------------------------------------
+
+Console output from Step 3.C
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+--------------------------------------------------
+
+1. How many commits have been done to the repository?
+
+Command I used:
+git log --oneline
+
+This command shows all the commits in the repository.
+
+--------------------------------------------------
+
+2. When was the README.md file modified last?
+
+Command used:
+git log -1 README.md
+
+It shows the most recent commit that changed the README file.
+
+--------------------------------------------------
+
+3. Two reasons why branches are used in Git
+
+Branches let people work on new features without breaking the main branch.
+They also allow different developers to work on things at the same time.
+
+--------------------------------------------------
+
+4. Difference between git log and git status
+
+git log shows the history of commits.
+
+git status shows what files changed and what is ready to commit.
+
+--------------------------------------------------
+
+5. Command to see commits where Vehicle.h was included
+
+git log -- Vehicle.h
+
+--------------------------------------------------
+
+6. Command to see commits with the word "file" in the message
+
+git log --grep="file"
+
+--------------------------------------------------
+
+7. OOP Concepts
+
+Inheritance:
+A class can use properties or methods from another class.
+
+Polymorphism:
+Different objects can use the same function name but behave differently.
+
+Encapsulation:
+Data and methods are kept inside a class and protected.
+
+--------------------------------------------------
+
+8. Difference between “Dictator and Lieutenants” and “Integration Manager”
+
+In the dictator model, one main person decides what goes into the project.
+
+In the integration manager model, a maintainer reviews pull requests and merges them.
+
+--------------------------------------------------
+
+9. Why a team of 100 developers might use the “Dictator and Lieutenants” workflow
+
+With many developers it helps organize work better. Lieutenants review code first so the main maintainer doesn’t have to check everything.
