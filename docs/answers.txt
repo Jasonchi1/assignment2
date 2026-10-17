@@ -1,86 +1,84 @@
 Name: Yiheng Chi
 FSUID: yc21i
 
-Date Git tutorials completed: March 7, 2026
+Date Git tutorials completed: October 17, 2026
 Date GitHub account created: Around 2024
+Repository: https://github.com/Jasonchi1/assignment2
 
---------------------------------------------------
+1. Console output from the push in Step 3.C
 
-Console output from Step 3.C
+Output from repeating Step 3.C to update and push docs/status.txt:
 
-On branch master
-Your branch is up to date with 'origin/master'.
+$ git commit -m "Update repository status record"
+[master c406f15] Update repository status record
+ 1 file changed, 7 insertions(+), 1 deletion(-)
 
-nothing to commit, working tree clean
+$ git push origin master 2>&1 | tee ../assignment2-push-output.txt
+To https://github.com/Jasonchi1/assignment2.git
+   1efb028..c406f15  master -> master
 
---------------------------------------------------
+2. How many commits have been done to the repository, by anyone?
 
-1. How many commits have been done to the repository?
-
-Command I used:
-git log --oneline
-
-This command shows all the commits in the repository.
-
---------------------------------------------------
-
-2. When was the README.md file modified last?
+There were 12 commits when I checked, including the original authors'
+commits and mine. This was before committing this updated answers file.
 
 Command used:
-git log -1 README.md
+git rev-list --count HEAD
 
-It shows the most recent commit that changed the README file.
+3. When was README.md modified last?
 
---------------------------------------------------
+README.md was last changed in a commit on October 17, 2026,
+at 11:12:01 +0800.
 
-3. Two reasons why branches are used in Git
+Command used:
+git log -1 -- README.md
 
-Branches let people work on new features without breaking the main branch.
-They also allow different developers to work on things at the same time.
+4. Mention two reasons why branches are used in a Git repository.
 
---------------------------------------------------
+Branches let people work on new features without affecting the main
+branch. They also let developers work on different tasks at the same time.
 
-4. Difference between git log and git status
+5. What is the difference between git log and git status?
 
-git log shows the history of commits.
+git log shows past commits, including who made them and their messages.
+git status shows the current branch and which files are staged, changed,
+or untracked.
 
-git status shows what files changed and what is ready to commit.
-
---------------------------------------------------
-
-5. Command to see commits where Vehicle.h was included
+6. What command shows commits where Vehicle.h was a committed file?
 
 git log -- Vehicle.h
 
---------------------------------------------------
-
-6. Command to see commits with the word "file" in the message
+7. What command shows commits whose messages contain the word "file"?
 
 git log --grep="file"
 
---------------------------------------------------
+8. What are inheritance, polymorphism, and encapsulation?
 
-7. OOP Concepts
+(I) Inheritance means a class can reuse and extend another class's
+properties and methods. For example, Car can inherit from Vehicle.
 
-Inheritance:
-A class can use properties or methods from another class.
+(II) Polymorphism means different objects can use the same interface
+but behave differently. For example, different vehicle types can have
+their own versions of a virtual method.
 
-Polymorphism:
-Different objects can use the same function name but behave differently.
+(III) Encapsulation means keeping data and related methods together in
+a class and controlling access to the data, such as using private fields
+and public methods.
 
-Encapsulation:
-Data and methods are kept inside a class and protected.
+9. What is the main difference between the Dictator and Lieutenants
+workflow and the Integration Manager workflow?
 
---------------------------------------------------
+In the Integration Manager workflow, one maintainer directly combines
+developers' changes. In the Dictator and Lieutenants workflow,
+lieutenants first combine changes from smaller groups and handle their
+conflicts. The dictator then combines the lieutenants' work and updates
+the official repository.
 
-8. Difference between “Dictator and Lieutenants” and “Integration Manager”
+10. How would a team of 100 developers benefit from Dictator and
+Lieutenants instead of the Centralized workflow?
 
-In the dictator model, one main person decides what goes into the project.
-
-In the integration manager model, a maintainer reviews pull requests and merges them.
-
---------------------------------------------------
-
-9. Why a team of 100 developers might use the “Dictator and Lieutenants” workflow
-
-With many developers it helps organize work better. Lieutenants review code first so the main maintainer doesn’t have to check everything.
+Instead of everyone pushing to one shared repository, developers work
+in smaller groups with lieutenants handling their changes and conflicts.
+This spreads out the work and lets groups make progress at the same
+time. The dictator only needs to combine the lieutenants' work rather
+than handle every developer's changes directly.
